@@ -299,7 +299,7 @@ function checkAllReady() {
         else if (6 <= A && A < 12) console.log("接天莲叶无穷碧，映日荷花别样红。"), set_flower(get_lotus());
         else if (12 <= A && A < 18) console.log("天阶夜色凉如水，卧看牵牛织女星。"), set_flower(get_maple());
         else {
-            if (!(18 <= A && A < 23)) return void console.log("未知节气.");
+            if (!(18 <= A && A <= 23)) return void console.log("未知节气.");
             console.log("忽如一夜春风来，千树万树梨花开。"), set_flower(get_snow())
         }
         start_render()
