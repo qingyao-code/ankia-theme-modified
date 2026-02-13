@@ -1,32 +1,32 @@
 # Ankia-Theme-Modified
-This repository is forked from: [https://github.com/dvai/Ankia-Theme](https://github.com/dvai/Ankia-Theme).
-Please refer to the above link for the original documentation and usage instructions.
-Based on the original repository, this repository has added new features, made adjustments, optimized user experience, and fixed existing bugs. The detailed updates are as follows:
+本仓库Fork自: [https://github.com/dvai/Ankia-Theme](https://github.com/dvai/Ankia-Theme)。
+原仓库的说明文档与使用方法请参考上方链接。
+本仓库在原项目的基础上，新增了一些功能、调整了布局、优化了用户体验，并修复了已知问题。详细更新内容如下：
 
-## New Features
-1. Added falling petal effects that switch with different seasons.
-2. Added social links for CSDN Blog homepage and Gitee homepage.
-3. Added a calendar module that displays real-time date, weekday, lunar calendar, and holiday information; official holidays are highlighted in red.
-4. Added random ancient poem: a random poem line is displayed on each refresh.
-5. Footer now shows precise website uptime, with an option to switch to rough display mode.
-6. Added article sharing: click to automatically copy the URL, with QR code support for mobile access.
-7. Archive page now shows post excerpts, with a toggle to show/hide excerpts.
-8. Added image zoom and preview functionality.
+## 新增功能
+1、飘花效果，随着季节切换不同的落花。
+2、社交方式新增CSDN博客主页、Gitee主页。
+3、日历模块，实时显示当前日期、星期、农历、节假日信息，公休日和节假日会标红。
+4、随机古诗，每次刷新随机获得一句古诗词。
+5、页脚信息显示精确站点运行时长，可切换成粗略显示的模式。
+6、文章分享功能，点击会自动复制URL链接，同时支持扫描二维码查看页面。
+7、归档页面增加摘要显示，且支持切换摘要显示隐藏状态。
+8、增加图片缩放查看功能。
 
-## Adjustments
-1. Moved "Shuoshuo" (Moments) to the top navigation bar.
-2. Hid category attributes.
-3. Blog post publish time now shows exact date and time.
-4. Renamed "Urge Update" function to "Charge".
-5. Homepage displays all tags and supports tag search.
+## 结构调整
+1、将说说调整到上方导航栏中。
+2、隐藏分类属性。
+3、博文发布时间会显示精确的日期时间。
+4、点此催更功能更名为充电。
+5、首页显示全部标签，并且可搜索。
 
-## Optimizations
-1. Avatar and background can now use cloud storage external links for faster loading.
-2. Recommended reading section will not display when empty, even if enabled.
-3. If a post already has an excerpt, republishing will no longer auto-generate and overwrite it.
-4. Added scrolling for blogger info and menu cards on small screens to prevent overflow.
-5. Added template alias settings for easier customization of blog post endpoints.
+## 体验优化
+1、头像和背景可采用云存储外链的方式，加快加载速度。
+2、推荐阅读即使开启了开关，在无内容时也不展示。
+3、当文章存在摘要时，取消发布后再次发布时，不会自动重新生成摘要以免覆盖原有摘要。
+4、在小屏幕下，当博主信息和菜单卡片过场时，增加滚动效果，避免溢出。
+5、模版增加别名设置，可以方便地设置博文端点。
 
-## Bug Fixes
-1. Fixed console error caused by forced word count display when the word count element does not exist.
-2. Fixed issue where code notes could not be copied directly.
+## 问题修复
+1、当字数统计元素不存在时，强行显示字数会导致控制台报错。
+2、修复代码笔记无法直接复制的问题。
