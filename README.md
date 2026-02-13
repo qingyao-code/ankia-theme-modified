@@ -1,173 +1,32 @@
-## Introduction
-Ankia-Theme is a blog theme based on the sharing feature of [Trilium](https://github.com/zadam/trilium), which can help you create a basic and aesthetically pleasing blog website.
+# Ankia-Theme-Modified
+This repository is forked from: [https://github.com/dvai/Ankia-Theme](https://github.com/dvai/Ankia-Theme).
+Please refer to the above link for the original documentation and usage instructions.
+Based on the original repository, this repository has added new features, made adjustments, optimized user experience, and fixed existing bugs. The detailed updates are as follows:
 
-Ankia-Theme是一个基于Trilium分享功能的博客主题，通过此主题你能实现在Trilium中创建一个博客站点！
+## New Features
+1. Added falling petal effects that switch with different seasons.
+2. Added social links for CSDN Blog homepage and Gitee homepage.
+3. Added a calendar module that displays real-time date, weekday, lunar calendar, and holiday information; official holidays are highlighted in red.
+4. Added random ancient poem: a random poem line is displayed on each refresh.
+5. Footer now shows precise website uptime, with an option to switch to rough display mode.
+6. Added article sharing: click to automatically copy the URL, with QR code support for mobile access.
+7. Archive page now shows post excerpts, with a toggle to show/hide excerpts.
+8. Added image zoom and preview functionality.
 
-主题预览：[东东的小黑盒](https://www.ankia.top)
+## Adjustments
+1. Moved "Shuoshuo" (Moments) to the top navigation bar.
+2. Hid category attributes.
+3. Blog post publish time now shows exact date and time.
+4. Renamed "Urge Update" function to "Charge".
+5. Homepage displays all tags and supports tag search.
 
-中文使用指南：[点我跳转](https://www.ankia.top/3LdIi2f30Pan)
+## Optimizations
+1. Avatar and background can now use cloud storage external links for faster loading.
+2. Recommended reading section will not display when empty, even if enabled.
+3. If a post already has an excerpt, republishing will no longer auto-generate and overwrite it.
+4. Added scrolling for blogger info and menu cards on small screens to prevent overflow.
+5. Added template alias settings for easier customization of blog post endpoints.
 
-## Features of this theme
-
-Compared to the built-in sharing feature of Trilium, this theme has the following features:
-
-- Having a complete blog system
-- The blog interface is simple and elegant
-- Perfectly adapted for mobile devices
-- Optimized reading experience for the main content
-- Added table of contents for the main content
-- Supports one-click publishing of blogs
-- Supports code highlighting
-
-## Installation
-
-To import the theme into Trilium, follow these steps:
-
-1. Right-click below the note where you want to store your blog.
-2. Select "Import into note".
-3. In the pop-up window, select the zip package downloaded in step one and uncheck "Safe import" under the "Options" section.
-4. Click "Import".
-
-If the import is successful, the notes with the following directory structure will appear in your notes:
-
-```text-plain
-- My blog
-    - Moments
-    - Article categories
-    - Recommended reading
-    - Timeline
-    - Friends' links
-    - About
-    - Unpublished
-    - Ankia Theme
-```
-
-> Note: These notes form the basic structure of a blog. Please do not delete them.
-
-Turn on the "Shared" switch of my blog notes to access the blog interface preview.
-
-![](./imgs/Preview.png)
-
-## Configuration
-
-### Basic Configuration
-
-All configurations for the blog are stored as Trilium attributes. Modify the values of the following attributes in the "My Blog" note to configure your blog:
-
-*   `#siteName = xxx` - The name of your blog, which will be displayed in browser tabs and navigation bars.
-*   `#bloggerName = xxx` - The nickname of the blogger, which will be displayed in the blogger information on the right side.
-*   `#blogStartTime = xxx` - The start time of your blog, which will be displayed as the running time in the footer.
-*   `#motto = xxx` - A motto or quote that will be displayed in the blogger information on the right side.
-
-### Changing Blog Avatar
-
-Replace the "Blogger Avatar" image under "My Blog → Ankia-Theme → imgs" with your own avatar.
-
-> Note: When replacing, please select "Upload new revision" and do not modify any titles or attributes. The same applies to other image configurations mentioned below.
-
-### Changing Blog Logo
-
-Replace the "Blog Logo" image under "My Blog → Ankia-Theme → imgs" with your own logo.
-
-### Social Information
-
-This theme supports displaying several social information, which are disabled by default. Fill in the corresponding attributes and homepage links to automatically enable them:
-
-*   `#githubLink = xxx` - GitHub
-*   `#mailLink = xxx` - Email
-*   `#zhihuLink = xxx` - Zhihu (a Chinese Q&A platform)
-*   `#sspai = xxx` - Sspai (a Chinese tech media platform)
-*   `#doubanLink = xxx` - Douban (a Chinese social networking service)
-*   `#netEaseCloudLink = xxx` - NetEase Cloud Music (a Chinese music streaming service)
-*   `#bilibiliLink = xxx` - Bilibili (a Chinese video sharing website)
-
-### Enabling Comments (Optional)
-
-This theme uses the Twikoo commenting system by default. Before configuring it, you need to deploy Twikoo. Refer to the [Twikoo documentation](https://twikoo.js.org/quick-start.html) for deployment instructions. After deployment, add the following attributes:
-
-*   `#enableTwikoo` - Enable Twikoo comments.
-*   `#envId = xxx` - The environment ID of Twikoo.
-
-### Enabling Article Views Counting (Optional)
-
-*   `#enableVisitors` - Enable counting article views.
-
-### Enabling Appreciation Functionality (Optional)
-
-To enable the appreciation functionality, add the following attribute:
-
-*   `#enableReward`
-
-After enabling appreciation functionality, replace the "Alipay QR Code" and "WeChat Pay QR Code" images under "My Blog → Ankia-Theme → imgs" with your own payment QR codes.
-
-### Other Optional Features
-
-*   `#enableTravellings` - Display a travel icon in the navigation bar.
-*   `#enableForeverblog` - Display a "Ten Years Pact" icon in the navigation bar.
-
-## Explanation of Friends' Links Functionality
-
-### Changing Your Own Friends' Links Information
-
-Modify the `myInfo` variable in the "fLinks.js" file under the "Friends' Links" note with your own blog information:
-
-```text-plain
-const myInfo = {
-    "title": "<Blog Name>",
-    "link": "<Blog Link>",
-    "img": "<Blogger Avatar>",
-    "des": "<Blog Description>"
-}
-```
-
-### Adding Others as Friends' Links
-
-Similarly, in the "fLinks.js" file, add entries to the `fLinks` variable following the format:
-
-```text-plain
-"<Number>": {
-    "title": "<Blog Name>",
-    "link": "<Blog Link>",
-    "img": "<Blogger Avatar>",
-    "des": "<Blog Description>"
-}
-```
-
-User Guide
-----
-
-## Creating Blog Categories
-
-Creating blog categories is very simple. Just create sub-notes under the "Article categories" note, and then assign the following attributes to that note:
-
-*   `#categoryName = xxx` - This attribute is used by the "blogStateChange" script to find the corresponding category. It is recommended to keep it consistent with the category title.
-*   `#sorted=date #sortDirection=desc` - (Optional but recommended) Sort blog posts by publication date in descending order.
-
-## Publishing a Blog Post
-
-You can write your blog post anywhere in your note repository. The only thing you need to do before writing a new blog post is to select the "Blog Post Template".
-
-Here's how to create a new blog post:
-
-1. Right-click on any parent note where you want to store your blog post (e.g., Today's Diary).
-2. Move your mouse over "Insert child note".
-3. Select "Blog Post Template".
-
-A blog post has four basic attributes:
-
-*   **Category** - The category to which the blog post belongs. It should match the value of `#categoryName` for the corresponding category.
-*   **Tags** - Tags for the blog post. Multiple tags can be added.
-*   **Header Image** - The preview image displayed on the homepage for the blog post. You need to provide a URL or image hosting link.
-*   **Time** - The publication time of the blog post.
-
-Publishing a blog post is simple. Just click the "Publish" button, and it will be published automatically. If you want to unpublish a blog post, simply uncheck the "Publish" option.
-
-## How to Pin a Blog Post
-
-To pin a blog post, add the following attribute to the desired blog post. This will make it appear at the top of the "Timeline" and its corresponding category.
-
-*   `#blogPostTop`
-
-Code highlighting
-
-This theme comes with the PrismJS code highlighting plugin, which currently supports HTML, XML, SVG, MathML, SSML, Atom, RSS, CSS, JavaScript, EJS, Go, C, C++, Python, ini, Bash, Json, Shell, SQL, TypeScript and YAML.
+## Bug Fixes
+1. Fixed console error caused by forced word count display when the word count element does not exist.
+2. Fixed issue where code notes could not be copied directly.
